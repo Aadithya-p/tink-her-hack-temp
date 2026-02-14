@@ -2,187 +2,271 @@
   <img src="./img.png" alt="Project Banner" width="100%">
 </p>
 
-# [Project Name] 🎯
+#TASKMINT 🎯
 
 ## Basic Details
 
-### Team Name: [Name]
+### Team Name: [HackHive]
 
 ### Team Members
-- Member 1: [Name] - [College]
-- Member 2: [Name] - [College]
+- Member 1: AADITHYA P- GOVERNMENT ENGINEERING COLLEGE,THRISSUR
+- Member 2: DEVIKA S - GOVERNMENT ENGINEERING COLLEGE,THRISSUR
 
 ### Hosted Project Link
 [mention your project hosted link here]
 
 ### Project Description
-[2-3 lines about what your project does]
+This is a React + Firebase task management web application where users can post, browse, and accept tasks. The app uses Firebase Authentication for secure login and Cloud Firestore to store user-specific task data. It is built as an auth-protected Single Page Application with real-time UI updates.
 
 ### The Problem statement
-[What problem are you solving?]
+College students have valuable skills and time to offer, but there is no structured system within campuses to convert small tasks into fair earning opportunities.
+
+Tasks like assignment help, note sharing, tech support, event coordination, and errands are handled informally through chats, without clear reward commitment, accountability, or structured compensation.
+
+As a result, students are often underpaid or unpaid, agreements fail, and a hidden campus micro-economy remains unorganized and undervalued.
 
 ### The Solution
-[How are you solving it?]
-
----
+The Solution
+CampusTask provides:
+A centralized task posting system
+Verified login via Firebase Authentication
+Secure task ownership
+Accept/reject workflow
+Activity tracking for posted and accepted tasks
+It creates a trusted and transparent campus gig ecosystem.
 
 ## Technical Details
+Frontend:
+    Built using React (Vite)
+    Uses functional components and React Hooks (useState, useEffect)
+    CSS used for styling and layout
+    Conditional rendering based on authentication state
+Backend (Using Firebase)
+    Instead of building a separate backend server, the app uses Firebase:
+    Firebase Authentication
+    Handles user signup, login, and session management.
+    Firebase Firestore
+    Stores all task data in a NoSQL database.
+
+Data Structure
+   Tasks are stored in a Firestore collection called tasks.
+   Each task contains:
+   Title
+   Description
+   Reward
+   Due Date
+   Status (open / accepted)
+   CreatedBy (user ID)
+   AcceptedBy (user ID)
+
+Security
+  Only logged-in users can access the app.
+  Each task is linked to the creator’s user ID.
+  Only the task owner can delete their task (enforced by Firestore rules).
+
 
 ### Technologies/Components Used
+Technologies/Components Used
+For Software:
+  Languages used:
+     JavaScript
+Frameworks used:
+    React (Vite setup)
+Libraries used:
+    Firebase Authentication
+    Firebase Firestore
+    React Hooks (useState, useEffect)
+Tools used:
+    VS Code
+    Git & GitHub
+    Firebase Console
+    Chrome DevTools
+    
 
 **For Software:**
-- Languages used: [e.g., JavaScript, Python, Java]
-- Frameworks used: [e.g., React, Django, Spring Boot]
-- Libraries used: [e.g., axios, pandas, JUnit]
-- Tools used: [e.g., VS Code, Git, Docker]
-
-**For Hardware:**
-- Main components: [List main components]
-- Specifications: [Technical specifications]
-- Tools required: [List tools needed]
-
----
+- Languages used: JavaScript (ES6+)
+- Frameworks used:  React
+- Libraries used:Firebase Authentication (User login & signup)
+            Firebase Firestore (Database for storing tasks)
+            React Hooks (useState, useEffect)
+- Tools used:VS Code
+             Chrome Developer Tools
+             Git & GitHub
+             Firebase Console
+  
 
 ## Features
-
-List the key features of your project:
-- Feature 1: [Description]
-- Feature 2: [Description]
-- Feature 3: [Description]
-- Feature 4: [Description]
-
+1,Secure User Authentication:
+Students can sign up and log in using Firebase Authentication to ensure verified participation within the campus ecosystem.
+2,Reward-Based Task Posting:
+Users can post micro-tasks with a specified reward amount, deadline, and description — converting small campus needs into structured earning opportunities.
+3Task Acceptance & Status Tracking:
+Students can browse available tasks and accept them. Task status updates dynamically (open → accepted), ensuring transparency and accountability.
+4,Activity Dashboard:
+Users can view:
+Tasks they have posted
+Tasks they have accepted
+This provides clear tracking of both earning and responsibility.
+5,Ownership-Based Deletion:
+Only the original task creator can delete their task, enforced through both UI logic and Firestore security rules.
+6,Secure Firestore Access Rules:
+Backend-level protection ensures only authenticated users can create, update, or delete tasks according to ownership rules.
 ---
+
 
 ## Implementation
-
 ### For Software:
 
-#### Installation
-```bash
-[Installation commands - e.g., npm install, pip install -r requirements.txt]
-```
-
-#### Run
-```bash
-[Run commands - e.g., npm start, python app.py]
-```
-
-### For Hardware:
-
-#### Components Required
-[List all components needed with specifications]
-
-#### Circuit Setup
-[Explain how to set up the circuit]
-
----
+  #### Installation
+  # Clone the repository
+  git clone https://github.com/your-username/your-repo-name.git
+  # Navigate into the project folder
+  cd your-repo-name
+  # Install dependencies
+  npm install
+  #### Run
+   # Start development server
+   npm run dev
 
 ## Project Documentation
 
-### For Software:
+This project is a React-based task management web application integrated with Firebase Authentication and Cloud Firestore. It allows users to securely log in, create tasks, browse available tasks, accept tasks, and manage their activity. The application is built as a Single Page Application (SPA) with dynamic UI updates and authentication-based access control.
 
-#### Screenshots (Add at least 3)
+#### Screenshots 
+1️⃣ Profile Page
+<img width="1920" height="1200" alt="image" src="https://github.com/user-attachments/assets/2a644d75-2920-4d25-b5ce-ac584aab9f41" />
+This screen shows the authenticated user’s profile information fetched from Firebase Authentication. It displays the user’s email, unique user ID (UID), account creation date, last login time, and provides a logout button. The app is auth-protected, meaning only logged-in users can access this page.
 
-![Screenshot1](Add screenshot 1 here with proper name)
-*Add caption explaining what this shows*
+2️⃣ Add New Task Modal
+<img width="1920" height="1200" alt="image" src="https://github.com/user-attachments/assets/01df184a-684b-4fa1-9d07-6bdf8aa0210d" />
+This modal allows users to create a new task. It includes fields for task title, description, reward, and due date. When submitted, the task data is stored in Firebase Firestore along with metadata like the user’s UID and timestamp.
 
-![Screenshot2](Add screenshot 2 here with proper name)
-*Add caption explaining what this shows*
+3️⃣ Available Tasks Page
+<img width="1920" height="1200" alt="image" src="https://github.com/user-attachments/assets/19ab2a04-80be-4ed5-b738-aa7b27109828" />
+This page displays all available tasks stored in Firestore. Users can search tasks using the search bar. Each task card shows the title, description, reward, due date, and posting information. Tasks created by the logged-in user are visually indicated.
 
-![Screenshot3](Add screenshot 3 here with proper name)
-*Add caption explaining what this shows*
-
+Activity Page (Posted & Accepted Tasks)
+<img width="1920" height="1200" alt="image" src="https://github.com/user-attachments/assets/ae88e085-c318-4c98-9032-893a6481ea83" />
+The Activity page displays tasks posted by the logged-in user and tasks accepted by them. It dynamically fetches data from Firestore and updates the UI based on task status (open/accepted). Users can delete their own tasks if they are still open
 #### Diagrams
 
 **System Architecture:**
 
 ![Architecture Diagram](docs/architecture.png)
-*Explain your system architecture - components, data flow, tech stack interaction*
+🏗 System Architecture
+The application follows a Frontend + Backend-as-a-Service (BaaS) architecture.
+Frontend: React (Vite) handles UI and state management.
+Authentication: Firebase Authentication manages login, logout, and session persistence.
+Database: Cloud Firestore stores task data.
+API Layer: Firebase SDK connects React to Firebase services.
+
+🔄 Data Flow
+User Action → React Component → Firebase SDK → Firestore → State Update → UI Re-render
+The app is auth-gated, meaning users must log in to access tasks and activity pages.
 
 **Application Workflow:**
-
-![Workflow](docs/workflow.png)
-*Add caption explaining your workflow*
-
----
-
-### For Hardware:
-
-#### Schematic & Circuit
-
-![Circuit](Add your circuit diagram here)
-*Add caption explaining connections*
-
-![Schematic](Add your schematic diagram here)
-*Add caption explaining the schematic*
+App loads → Firebase checks authentication.
+If logged in → Dashboard opens.
+User can create, view, accept, or delete tasks.
+All task changes are stored in Firestore.
+Logout → Session ends and user returns to login screen.
 
 #### Build Photos
 
 ![Team](Add photo of your team here)
 
-![Components](Add photo of your components here)
-*List out all components shown*
+##COMPONENTS
+App.jsx – Root component controlling navigation and auth state
+Tasks.jsx – Displays available tasks
+Activity.jsx – Shows posted and accepted tasks
+Profile.jsx – Displays user information
+AddTaskModal.jsx – Task creation form
+TaskCard.jsx – Reusable task display component
+BottomNav.jsx – Navigation between pages
+firebase.js – Firebase configuration
 
 ![Build](Add photos of build process here)
-*Explain the build steps*
 
-![Final](Add photo of final product here)
-*Explain the final build*
+ build steps*
+<img width="1920" height="1200" alt="image" src="https://github.com/user-attachments/assets/77364070-8089-497d-a018-334f9a5584ce" />
 
----
+The final product is a fully functional React + Firebase task management web application with secure authentication and real-time database integration.
+ Key Features:
+ Secure login and logout using Firebase Authentication
+ Create, view, search, and delete tasks
+ Accept tasks and track activity
+ User-specific task management using Firestore
+ Dynamic UI updates without page reload (Single Page Application)
+ The application is auth-protected, scalable, and responsive, demonstrating complete frontend–backend integration using a   Backend-as-a-Service architecture.
 
 ## Additional Documentation
-
-### For Web Projects with Backend:
+Backend Type:
+Backend-as-a-Service (BaaS) using Firebase
+Services Used:
+Firebase Authentication
+Cloud Firestore
+Firebase SDK
 
 #### API Documentation
+Authentication is handled using Firebase’s built-in API methods.
+Login
+Method Used:
+signInWithEmailAndPassword(auth, email, password)
+Purpose:
+Authenticates existing users and creates a session.
+Register
+createUserWithEmailAndPassword(auth, email, password)
+Purpose:
+Registers new users in Firebase Authentication.
+Logout
+signOut(auth)
+Purpose:
+Ends the user session and redirects to login.
+Firestore Database Operations
+Create Task
+addDoc(collection(db, "tasks"), taskData)
+Description:
+Stores new task data in Firestore.
+Fetch Tasks
+getDocs(collection(db, "tasks"))
+Description:
+Retrieves all tasks from the database.
+Update Task (Accept Task)
+updateDoc(doc(db, "tasks", taskId), updatedData)
+Description:
+Updates task status (e.g., open → accepted).
+Delete Task
+deleteDoc(doc(db, "tasks", taskId))
+Description:
+Removes a task from Firestore.
 
-**Base URL:** `https://api.yourproject.com`
-
-##### Endpoints
-
-**GET /api/endpoint**
-- **Description:** [What it does]
-- **Parameters:**
-  - `param1` (string): [Description]
-  - `param2` (integer): [Description]
-- **Response:**
-```json
-{
-  "status": "success",
-  "data": {}
-}
-```
-
-**POST /api/endpoint**
-- **Description:** [What it does]
-- **Request Body:**
-```json
-{
-  "field1": "value1",
-  "field2": "value2"
-}
-```
-- **Response:**
-```json
-{
-  "status": "success",
-  "message": "Operation completed"
-}
-```
-
-[Add more endpoints as needed...]
-
----
-
-### For Mobile Apps:
-
-#### App Flow Diagram
-
-![App Flow](docs/app-flow.png)
-*Explain the user flow through your application*
 
 #### Installation Guide
+Prerequisites
+Node.js (v16 or higher recommended)
+npm (comes with Node)
+Firebase project configured
+Clone the Repository
+git clone https://github.com/your-username/your-project.git
+cd your-project
+ Install Dependencies
+npm install
+Configure Firebase
+Go to Firebase Console
+Create a project
+Enable Authentication (Email/Password)
+Enable Firestore Database
+Copy your Firebase config
+Paste it inside firebase.js
+ Run Development Server
+npm run dev
+Open in browser:
+[://localhost:5173](http://localhost:5173
+ Build for Production
+npm run build
+Production files will be generated inside the dist/ folder.
+
+
 
 **For Android (APK):**
 1. Download the APK from [Release Link]
@@ -215,52 +299,16 @@ xcodebuild -workspace App.xcworkspace -scheme App -configuration Debug
 
 ---
 
-### For Hardware Projects:
 
-#### Bill of Materials (BOM)
-
-| Component | Quantity | Specifications | Price | Link/Source |
-|-----------|----------|----------------|-------|-------------|
-| Arduino Uno | 1 | ATmega328P, 16MHz | ₹450 | [Link] |
-| LED | 5 | Red, 5mm, 20mA | ₹5 each | [Link] |
-| Resistor | 5 | 220Ω, 1/4W | ₹1 each | [Link] |
-| Breadboard | 1 | 830 points | ₹100 | [Link] |
-| Jumper Wires | 20 | Male-to-Male | ₹50 | [Link] |
-| [Add more...] | | | | |
-
-**Total Estimated Cost:** ₹[Amount]
-
-#### Assembly Instructions
-
-**Step 1: Prepare Components**
-1. Gather all components listed in the BOM
-2. Check component specifications
-3. Prepare your workspace
-![Step 1](images/assembly-step1.jpg)
-*Caption: All components laid out*
-
-**Step 2: Build the Power Supply**
-1. Connect the power rails on the breadboard
-2. Connect Arduino 5V to breadboard positive rail
-3. Connect Arduino GND to breadboard negative rail
-![Step 2](images/assembly-step2.jpg)
-*Caption: Power connections completed*
-
-**Step 3: Add Components**
-1. Place LEDs on breadboard
-2. Connect resistors in series with LEDs
-3. Connect LED cathodes to GND
-4. Connect LED anodes to Arduino digital pins (2-6)
-![Step 3](images/assembly-step3.jpg)
-*Caption: LED circuit assembled*
-
-**Step 4: [Continue for all steps...]**
 
 **Final Assembly:**
 ![Final Build](images/final-build.jpg)
-*Caption: Completed project ready for testing*
-
----
+The final build is a production-ready React application located in the dist folder.
+It can be deployed to:
+Firebase Hosting
+Vercel
+Netlify
+GitHub Pages
 
 ### For Scripts/CLI Tools:
 
@@ -371,32 +419,42 @@ python script.py -v --format json data.json
 ---
 
 ## AI Tools Used (Optional - For Transparency Bonus)
+AI Tools Used (Optional – For Transparency Bonus)
+Tool Used: ChatGPT
+Purpose:
+Guidance for integrating React with Firebase Authentication
+Assistance with Firestore CRUD operations (addDoc, getDocs, updateDoc, deleteDoc)
+Debugging async behavior and state updates in React
+Structuring components and improving code readability
+Writing project documentation and architecture explanations
+Clarifying concepts related to authentication flow and data modeling
 
-If you used AI tools during development, document them here for transparency:
+KEY PROMPTS USED:
+ How to fetch and display Firestore documents in React using useEffect?”
+“How to update a Firestore document when a task is accepted?”
+“Why is my Firebase async function not updating state correctly?”
+“How to implement a search filter in React?”
+“How to structure a React app with multiple pages without React Router?”
+“Help me debug this Firebase permission error.”
 
-**Tool Used:** [e.g., GitHub Copilot, v0.dev, Cursor, ChatGPT, Claude]
+AI was used mainly for:
+Approximately 25–35%
+Understanding Firebase integration
+Debugging errors
+Structuring components
+Improving code clarity
+Writing documentation
 
-**Purpose:** [What you used it for]
-- Example: "Generated boilerplate React components"
-- Example: "Debugging assistance for async functions"
-- Example: "Code review and optimization suggestions"
+ Human Contributions
+Designed overall system architecture (React + Firebase)
+Implemented core business logic (post, accept, update tasks)
+Integrated Firebase Authentication and Firestore
+Tested multi-user flows and real-time updates
+Designed UI layout and user experience decisions
 
-**Key Prompts Used:**
-- "Create a REST API endpoint for user authentication"
-- "Debug this async function that's causing race conditions"
-- "Optimize this database query for better performance"
-
-**Percentage of AI-generated code:** [Approximately X%]
-
-**Human Contributions:**
-- Architecture design and planning
-- Custom business logic implementation
-- Integration and testing
-- UI/UX design decisions
-
-*Note: Proper documentation of AI usage demonstrates transparency and earns bonus points in evaluation!*
-
----
+AI Usage Transparency
+AI was used for code refinement, debugging, styling improvements, and documentation support.
+All architecture decisions, core logic, and integrations were implemented and validated manually.
 
 ## Team Contributions
 
