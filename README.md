@@ -2,18 +2,18 @@
   <img src="./img.png" alt="Project Banner" width="100%">
 </p>
 
-#TASKMINT 🎯
+#TASKMINT 
 
 ## Basic Details
 
-### Team Name: [HackHive]
+### Team Name: HackHive
 
 ### Team Members
 - Member 1: AADITHYA P- GOVERNMENT ENGINEERING COLLEGE,THRISSUR
 - Member 2: DEVIKA S - GOVERNMENT ENGINEERING COLLEGE,THRISSUR
 
 ### Hosted Project Link
-[mention your project hosted link here]
+https://tink-her-hack-temp-8uh1.onrender.com/
 
 ### Project Description
 This is a React + Firebase task management web application where users can post, browse, and accept tasks. The app uses Firebase Authentication for secure login and Cloud Firestore to store user-specific task data. It is built as an auth-protected Single Page Application with real-time UI updates.
@@ -116,7 +116,6 @@ Backend-level protection ensures only authenticated users can create, update, or
 
 ## Implementation
 ### For Software:
-
   #### Installation
   # Clone the repository
   git clone https://github.com/your-username/your-repo-name.git
@@ -152,7 +151,6 @@ The Activity page displays tasks posted by the logged-in user and tasks accepted
 
 **System Architecture:**
 
-![Architecture Diagram](docs/architecture.png)
 🏗 System Architecture
 The application follows a Frontend + Backend-as-a-Service (BaaS) architecture.
 Frontend: React (Vite) handles UI and state management.
@@ -171,10 +169,6 @@ User can create, view, accept, or delete tasks.
 All task changes are stored in Firestore.
 Logout → Session ends and user returns to login screen.
 
-#### Build Photos
-
-![Team](Add photo of your team here)
-
 ##COMPONENTS
 App.jsx – Root component controlling navigation and auth state
 Tasks.jsx – Displays available tasks
@@ -184,8 +178,6 @@ AddTaskModal.jsx – Task creation form
 TaskCard.jsx – Reusable task display component
 BottomNav.jsx – Navigation between pages
 firebase.js – Firebase configuration
-
-![Build](Add photos of build process here)
 
  build steps*
 <img width="1920" height="1200" alt="image" src="https://github.com/user-attachments/assets/77364070-8089-497d-a018-334f9a5584ce" />
@@ -268,155 +260,13 @@ Production files will be generated inside the dist/ folder.
 
 
 
-**For Android (APK):**
-1. Download the APK from [Release Link]
-2. Enable "Install from Unknown Sources" in your device settings:
-   - Go to Settings > Security
-   - Enable "Unknown Sources"
-3. Open the downloaded APK file
-4. Follow the installation prompts
-5. Open the app and enjoy!
-
-**For iOS (IPA) - TestFlight:**
-1. Download TestFlight from the App Store
-2. Open this TestFlight link: [Your TestFlight Link]
-3. Click "Install" or "Accept"
-4. Wait for the app to install
-5. Open the app from your home screen
-
-**Building from Source:**
-```bash
-# For Android
-flutter build apk
-# or
-./gradlew assembleDebug
-
-# For iOS
-flutter build ios
-# or
-xcodebuild -workspace App.xcworkspace -scheme App -configuration Debug
-```
-
----
-
-
-
 **Final Assembly:**
 ![Final Build](images/final-build.jpg)
 The final build is a production-ready React application located in the dist folder.
 It can be deployed to:
-Firebase Hosting
-Vercel
-Netlify
-GitHub Pages
+render
+link:https://tink-her-hack-temp-8uh1.onrender.com/
 
-### For Scripts/CLI Tools:
-
-#### Command Reference
-
-**Basic Usage:**
-```bash
-python script.py [options] [arguments]
-```
-
-**Available Commands:**
-- `command1 [args]` - Description of what command1 does
-- `command2 [args]` - Description of what command2 does
-- `command3 [args]` - Description of what command3 does
-
-**Options:**
-- `-h, --help` - Show help message and exit
-- `-v, --verbose` - Enable verbose output
-- `-o, --output FILE` - Specify output file path
-- `-c, --config FILE` - Specify configuration file
-- `--version` - Show version information
-
-**Examples:**
-
-```bash
-# Example 1: Basic usage
-python script.py input.txt
-
-# Example 2: With verbose output
-python script.py -v input.txt
-
-# Example 3: Specify output file
-python script.py -o output.txt input.txt
-
-# Example 4: Using configuration
-python script.py -c config.json --verbose input.txt
-```
-
-#### Demo Output
-
-**Example 1: Basic Processing**
-
-**Input:**
-```
-This is a sample input file
-with multiple lines of text
-for demonstration purposes
-```
-
-**Command:**
-```bash
-python script.py sample.txt
-```
-
-**Output:**
-```
-Processing: sample.txt
-Lines processed: 3
-Characters counted: 86
-Status: Success
-Output saved to: output.txt
-```
-
-**Example 2: Advanced Usage**
-
-**Input:**
-```json
-{
-  "name": "test",
-  "value": 123
-}
-```
-
-**Command:**
-```bash
-python script.py -v --format json data.json
-```
-
-**Output:**
-```
-[VERBOSE] Loading configuration...
-[VERBOSE] Parsing JSON input...
-[VERBOSE] Processing data...
-{
-  "status": "success",
-  "processed": true,
-  "result": {
-    "name": "test",
-    "value": 123,
-    "timestamp": "2024-02-07T10:30:00"
-  }
-}
-[VERBOSE] Operation completed in 0.23s
-```
-
----
-
-## Project Demo
-
-### Video
-[Add your demo video link here - YouTube, Google Drive, etc.]
-
-*Explain what the video demonstrates - key features, user flow, technical highlights*
-
-### Additional Demos
-[Add any extra demo materials/links - Live site, APK download, online demo, etc.]
-
----
 
 ## AI Tools Used (Optional - For Transparency Bonus)
 AI Tools Used (Optional – For Transparency Bonus)
@@ -456,13 +306,6 @@ AI Usage Transparency
 AI was used for code refinement, debugging, styling improvements, and documentation support.
 All architecture decisions, core logic, and integrations were implemented and validated manually.
 
-## Team Contributions
-
-- [Name 1]: [Specific contributions - e.g., Frontend development, API integration, etc.]
-- [Name 2]: [Specific contributions - e.g., Backend development, Database design, etc.]
-- [Name 3]: [Specific contributions - e.g., UI/UX design, Testing, Documentation, etc.]
-
----
 
 ## License
 
